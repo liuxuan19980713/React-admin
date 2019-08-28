@@ -1,0 +1,69 @@
+/*
+*   base.css主要是用来重置一些标签的默认样式
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 让所有的元素都设置box-sizing属性，并且设置轻击的时候颜色透明  防止文本溢出，出现滚动条，造成用户的体验不好*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 14px;
+    background-color: #ccc;
+    font-family: Microsoft YaHei, sans-serif
+}
+i{
+    font-style: normal;
+}
+input,
+textarea {
+    border: none;
+    outline: none;
+    /*清除轮廓线*/
+    resize: none;
+    /*不允许拖拽*/
+    -webkit-appearance: button;
+    /*元素的外观*/
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+.clearFix::after,
+.clearFix::before {
+    content: "";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    line-height: 0;
+    clear: both;
+}
+
+.clearFix {
+    *zoom: 1;
+    /*兼容ie6,7*/
+}
+body,html,#root{
+    width: 100%;
+    height: 100%;
+}
