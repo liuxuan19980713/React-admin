@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Form, Icon, Input, Button,message } from 'antd'
 import {Redirect} from 'react-router-dom'
 import './login.less'
-import logo from './images/logo.png'
+import logo from '../../assets/images/logo.png'
 import {reLogin} from '../../api/index.js'
 import storageUtils from '../../utils/localStorage.js'
 class NormalLoginForm extends Component {

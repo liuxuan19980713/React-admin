@@ -1,0 +1,19 @@
+.leftNav .leftNav-header {
+  display: flex;
+  height: 80px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #002140;
+}
+.leftNav .leftNav-header img {
+  width: 40px;
+  height: 40px;
+  background-color: #002140;
+}
+.leftNav .leftNav-header h2 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
