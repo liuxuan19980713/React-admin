@@ -2,4 +2,48 @@
     padding: 0;
     height: 80px;
     background-color: #fff;
+    font-size: 14px;
+    .headerAdmin-top{
+            height: 40px;
+            line-height: 40px;
+            text-align: right;
+            border-bottom: 1px solid #1DA57A;
+            padding-right: 40px;
+            .exit{
+                margin-left: 15px;
+                height: 22px;
+            }
+    }
+    .headerAdmin-bottom{
+        display: flex;
+        flex-direction: row;
+        line-height: 40px;
+        height: 40px;
+        padding-right: 40px;
+        .headerAdmin-bottom-left{
+            position: relative;
+            text-align: center;
+            width: 25%;
+            &::after{
+                content: "";
+                left: 50%;
+                transform: translate(-50%);
+                top: 100%;
+                position: absolute;
+                border-top:20px solid #fff;
+                border-right:20px solid transparent;
+                border-bottom:20px solid transparent;
+                border-left:20px solid transparent;
+            }
+        }
+        .headerAdmin-bottom-right{
+            text-align: right;
+            width: 75%;
+            img{
+                margin: 0 15px;
+                width: 30px;
+                height: 20px;
+            }
+        }
+    }
 }

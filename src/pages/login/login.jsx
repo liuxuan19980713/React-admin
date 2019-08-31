@@ -23,7 +23,7 @@ class NormalLoginForm extends Component {
           storageUtils.saveUser(result.data)
           // localStorage.setItem('user',JSON.stringify(result.data))
           //跳转到admin页 
-          this.props.history.replace('/')
+          this.props.history.replace('/home')
         }else{
           message.error(result.msg)
         }
