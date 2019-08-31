@@ -23,3 +23,12 @@ export const weather = (city)=>{
     
     
 }
+
+// 获取一级分类
+export const category = (parentId)=>{
+    return ajax('/manage/category/list',{parentId},'GET')
+}
+// 添加一级分类
+export const addCategory = (parentId,categoryName)=>{
+    return ajax('/manage/category/add',{parentId,categoryName},'POST')
+}
