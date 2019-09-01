@@ -21,5 +21,4 @@ export default function ajax(url,data={},type='GET'){
             message.error(err.message)
           })
     })
-    
 }

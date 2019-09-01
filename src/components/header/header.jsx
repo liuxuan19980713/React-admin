@@ -53,9 +53,10 @@ class Header extends Component {
             title = cItem
           }
         })
-      }
-      if (item.key === pathname) {
+      }else if (item.key === pathname) {
         title = item
+      }else{
+        title={title:'首页'}
       }
     })
     const { currentTime } = this.state

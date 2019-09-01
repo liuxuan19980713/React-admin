@@ -27,18 +27,8 @@ class NormalLoginForm extends Component {
         }else{
           message.error(result.msg)
         }
-       
-       
-        // 使用await请求失败了,应该使用try catch来处理
-        // .then(response=>{
-        //  console.log(response.data)
-        // })
-        // .catch(err=>{
-        //   console.log('查询失败'+err.message)
-        // })
       }else{
-        console.log('密码或者用户名不符合规范')
-        // console.log('密码或者用户名不正确')
+        message.error('密码或者用户名不符合规范')
       }
     });
   };
@@ -66,7 +56,8 @@ class NormalLoginForm extends Component {
                     {required:true,message:'用户名不可以为空'},
                     {min:4,message:'用户名的长度不可以低于4'},
                     {max:12,message:'用户名的长度不可以小于12'}
-                  ]
+                  ],
+                  initialValue:'admin'
                 })(
                   <Input prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />}
                   placeholder='Username'
@@ -95,7 +86,6 @@ class NormalLoginForm extends Component {
               >
                 登录
               </Button>
-        
             </Form.Item>
           </Form>
         </section>

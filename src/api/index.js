@@ -32,3 +32,8 @@ export const category = (parentId)=>{
 export const addCategory = (parentId,categoryName)=>{
     return ajax('/manage/category/add',{parentId,categoryName},'POST')
 }
+
+//更新分类数据
+export const updateEditCategory = (categoryId,categoryName)=>{
+    return ajax('/manage/category/update',{categoryId,categoryName},'POST')
+}
