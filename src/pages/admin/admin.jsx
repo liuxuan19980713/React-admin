@@ -45,7 +45,7 @@ export default class Admin extends Component {
               <Redirect to='/home' />
             </Switch>
           </Content>
-          <Footer>2019年9月1日20:48:18</Footer>
+          <Footer>84 2019年9月4日14:50:29</Footer>
         </Layout>
       </Layout>
     )

@@ -24,9 +24,10 @@ class LeftNav extends Component {
           </Menu.Item>
         )
       } else {
-       const cItem =  item.children.find(cItem=>cItem.key===this.props.location.pathname)
+       const cItem =  item.children.find(cItem=>this.props.location.pathname.includes(cItem.key))
        if(cItem){
          this.openKey = item.key
+         console.log(this.openKey)
        }
         return (
           <SubMenu
@@ -50,7 +51,7 @@ class LeftNav extends Component {
     {this.data = this.renderNav(menuList)}
   }
   render () {
-   
+   this.type = '/'+this.props.location.pathname.split('/')[1]
     return (
       <div className='leftNav'>
         <Link className='leftNav-header' to='/'>
@@ -59,7 +60,8 @@ class LeftNav extends Component {
         </Link>
 
         <Menu
-          selectedKeys={[this.props.location.pathname]}
+        
+          selectedKeys={[this.type]}
           defaultOpenKeys={[this.openKey]}
           mode='inline'
           theme='dark'
